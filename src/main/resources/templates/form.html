@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+	<html xmlns:th ="http://www.thymeleaf.org">
+		<head>
+			<title>Quesadilla</title>
+			<meta charset="utf-8">
+			<link href="../static/css/styles.css" th:href="@{/css/styles.css}" type="text/css" rel="stylesheet">
+		</head>
+		<body>
+			<div class="conteiner">
+				<div>
+					<h1>Arma tu quesadilla </h1>
+				</div>
+				<div>
+					<form action="/pedido/crear" method="post">
+						<label for="txtNombre">Nombre</label>
+						<input id="txtNombre" type="text" name="nombre" >
+						<br>
+						<label>Elige el tipo de tortilla</label>
+						<br>
+						<select name="tipoTortilla" >
+							<option selected disabled>Tipo de tortilla</option>
+							<option value="1">Maíz</option>
+							<option value="2">Maíz a mano</option>
+							<option value="3">Harina</option>
+						</select>
+						<br>
+						<div>
+							<label>Chile</label>
+							<br>	
+							No<input type="radio" value="1" name="tipoChile">
+	 						Pica<input type="radio" value="2"  name="tipoChile">
+	  						Pikachu<input type="radio" value="3" name="tipoChile">
+						</div>
+						<div>
+							<label>Queso</label>
+							<br>
+							Normal<input type="radio" value="normal" name="queso">
+							Doble<input type="radio" value="doble" name="queso">
+						</div>
+						<textarea rows="10" cols="40" placeholder="Descripción" name="comentario"></textarea>
+						<br>
+						<input type="submit" value="Crear">
+					</form>
+				</div>
+			</div>
+		</body>
+	</html>
